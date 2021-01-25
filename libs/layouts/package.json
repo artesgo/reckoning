@@ -1,0 +1,12 @@
+{
+    "name": "@artesgo/layouts",
+    "version": "1.0.0",
+    "peerDependencies": {
+        "@angular/common": "11.1.0",
+        "@angular/core": "11.1.0"
+    },
+    "publishConfig": {
+        "access": "public",
+        "directory": "../../dist/layouts"
+    }
+}

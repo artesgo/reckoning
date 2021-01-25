@@ -1,0 +1,8 @@
+{
+    "name": "@artesgo/style-utils",
+    "version": "1.0.0",
+    "publishConfig": {
+        "access": "public",
+        "directory": "../../dist/style-utils"
+    }
+}

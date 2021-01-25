@@ -1,0 +1,11 @@
+{
+  "$schema": "../../node_modules/ng-packagr/package.schema.json",
+  "dest": "../../dist/style-utils",
+  "lib": {
+    "entryFile": "src/public_api.ts"
+  },
+  "assets": [
+    "./*.scss",
+    "./partials/*"
+  ]
+}

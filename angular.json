@@ -21,6 +21,12 @@
               "apps/reckoning/src/assets"
             ],
             "styles": ["apps/reckoning/src/styles.scss"],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "apps/reckoning/src/styles",
+                "node_modules"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -121,6 +127,18 @@
       "sourceRoot": "libs/state-machine/src",
       "prefix": "artesgo",
       "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/state-machine/tsconfig.lib.json",
+            "project": "libs/state-machine/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "libs/state-machine/ng-package.json"
+            }
+          }
+        },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
@@ -146,6 +164,18 @@
       "sourceRoot": "libs/components/src",
       "prefix": "artesgo",
       "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/components/tsconfig.lib.json",
+            "project": "libs/components/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "libs/components/ng-package.json"
+            }
+          }
+        },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
@@ -161,6 +191,63 @@
           "options": {
             "jestConfig": "libs/components/jest.config.js",
             "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "layouts": {
+      "projectType": "library",
+      "root": "libs/layouts",
+      "sourceRoot": "libs/layouts/src",
+      "prefix": "artesgo",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/layouts/tsconfig.lib.json",
+            "project": "libs/layouts/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "libs/layouts/ng-package.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/layouts/src/**/*.ts",
+              "libs/layouts/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/layouts"],
+          "options": {
+            "jestConfig": "libs/layouts/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "style-utils": {
+      "projectType": "library",
+      "root": "libs/style-utils",
+      "sourceRoot": "libs/styles/src",
+      "prefix": "artesgo",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/style-utils/tsconfig.lib.json",
+            "project": "libs/style-utils/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "libs/style-utils/ng-package.json"
+            }
           }
         }
       }

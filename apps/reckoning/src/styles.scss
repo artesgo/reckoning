@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/cdk/overlay-prebuilt.css';
+@import '~@artesgo/style-utils/index';
+@import 'font-family';
+
+html, body {
+  margin: 0;
+  padding: 0;
+}

@@ -16,7 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "@artesgo/state-machine": ["libs/state-machine/src/index.ts"],
-      "@artesgo/components": ["libs/components/src/index.ts"]
+      "@artesgo/components": ["libs/components/src/index.ts"],
+      "@artesgo/layouts": ["libs/layouts/src/index.ts"],
+      "@artesgo/styles": ["libs/styles/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

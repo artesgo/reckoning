@@ -1,0 +1,5 @@
+@import 'font-tokens';
+
+@function font-size($size) {
+    @return map-get($size, 'font-size');
+}

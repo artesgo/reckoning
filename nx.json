@@ -24,6 +24,8 @@
     "reckoning": { "tags": [] },
     "reckoning-e2e": { "tags": [], "implicitDependencies": ["reckoning"] },
     "state-machine": { "tags": [] },
-    "components": { "tags": [] }
+    "components": { "tags": [] },
+    "layouts": { "tags": [] },
+    "style-utils": { "tags": [] }
   }
 }
