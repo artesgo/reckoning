@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'artesgo-root',
@@ -6,14 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'reckoning';
+  title$ = new BehaviorSubject('Growcery');
   year;
+
+  constructor(private renderer: Renderer2) { }
 
   ngOnInit() {
     this.year = new Date().getFullYear();
   }
 
-  clicky() {
-    console.log('yo')
+  toggleDarkMode() {
+    this.renderer.addClass(document.body, 'darkness');
   }
 }

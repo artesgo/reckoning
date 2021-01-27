@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { ComponentsModule } from '@artesgo/components';
 import { LayoutsModule } from '@artesgo/layouts';
 import { StateMachineModule } from '@artesgo/state-machine';
+import { GroceryModule } from '@artesgo/grocery';
 import { AppComponent } from './app.component';
 import { Route, RouterModule } from '@angular/router';
 import { KarlaComponent } from './pages/karla/karla.component';
@@ -21,6 +22,7 @@ const ROUTES: Route[] = [
     BrowserModule,
     ComponentsModule,
     LayoutsModule,
+    GroceryModule,
     RouterModule.forRoot(ROUTES),
     StateMachineModule,
   ],

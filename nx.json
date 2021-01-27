@@ -26,6 +26,8 @@
     "state-machine": { "tags": [] },
     "components": { "tags": [] },
     "layouts": { "tags": [] },
-    "style-utils": { "tags": [] }
+    "style-utils": { "tags": [] },
+    "grocery": { "tags": [] },
+    "auth": { "tags": [] }
   }
 }

@@ -1,3 +1,10 @@
 header {
     background: #FC0;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+
+    & [logo] {
+        background: #333;
+    }
 }

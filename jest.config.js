@@ -5,5 +5,7 @@ module.exports = {
     '<rootDir>/libs/components',
     '<rootDir>/libs/layouts',
     '<rootDir>/libs/style-utils',
+    '<rootDir>/libs/grocery',
+    '<rootDir>/libs/auth',
   ],
 };
