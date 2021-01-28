@@ -9,6 +9,7 @@ import { BehaviorSubject } from 'rxjs';
 export class AppComponent implements OnInit {
   title$ = new BehaviorSubject('Growcery');
   year;
+  dark = false;
 
   constructor(private renderer: Renderer2) { }
 
@@ -17,6 +18,12 @@ export class AppComponent implements OnInit {
   }
 
   toggleDarkMode() {
-    this.renderer.addClass(document.body, 'darkness');
+    if (this.dark) {
+      this.dark = false;
+      this.renderer.removeClass(document.body, 'dark-mode');
+    } else {
+      this.dark = true;
+      this.renderer.addClass(document.body, 'dark-mode');
+    }
   }
 }

@@ -1,10 +1,25 @@
+@use '~@artesgo/style-utils/index' as utils;
+
 header {
-    background: #FC0;
     display: flex;
+    background: #FC0;
     justify-content: space-between;
     padding: 12px;
 
     & [logo] {
-        background: #333;
+        background: none;
+        border: none;
+    }
+    & [login] {
+        background: none;
+        border: none;
+    }
+}
+
+
+.dark-mode {
+    transition: utils.$transition;
+    & header {
+        background: #111;
     }
 }

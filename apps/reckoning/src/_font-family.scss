@@ -1,3 +1,5 @@
+@use '~@artesgo/style-utils/index';
+
 @font-face {
     font-family: "Karla";
     src: local("Karla"), url(./assets/Karla-VariableFont_wght.ttf) format("truetype");
@@ -5,4 +7,15 @@
 
 * {
     font-family: 'Karla', sans-serif;
+}
+
+body {
+    color: #222;
+    background: #FFF;
+    transition: $transition;
+    &.dark-mode {
+        color: #EEE;
+        background: #222;
+        transition: $transition;
+    }
 }

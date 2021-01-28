@@ -1,10 +1,19 @@
+@use '~@artesgo/style-utils/index' as utils;
+
 footer {
     width: 100%;
-    background: #FC0;
     display: flex;
+    background: #FC0;
     justify-content: space-between;
     
     & div {
         padding: 16px 32px;
+    }
+}
+
+.dark-mode {
+    transition: utils.$transition;
+    & footer {
+        background: #111;
     }
 }

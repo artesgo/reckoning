@@ -1,4 +1,4 @@
-@import '~@artesgo/style-utils';
+@use '~@artesgo/style-utils' as utils;
 
 :host {
   display: block;

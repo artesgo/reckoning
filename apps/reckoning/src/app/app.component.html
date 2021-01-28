@@ -3,9 +3,9 @@
     <img src="./assets/svg/033-grocery.svg" alt="groceries in paper bag logo" />
   </button>
   <span title>{{ title$ | async }}</span>
-  <button login>
+  <button login (click)="toggleDarkMode()">
     <img src="./assets/svg/028-shopping-basket.svg" alt="show grocery list" />
-  </button>    
+  </button>
 </reck-header>
 
 <div class="side-nav"></div>
