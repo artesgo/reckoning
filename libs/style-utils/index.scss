@@ -1,2 +1,8 @@
-@import './partials/variables';
+@import './partials/tokens';
 @import './partials/mixins';
+
+$weight: font-weight(thicc);
+$fontSize: font-size(m);
+$space: spacing(xl);
+
+@debug $weight $fontSize $space;

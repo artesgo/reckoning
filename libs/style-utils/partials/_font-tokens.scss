@@ -1,4 +1,4 @@
-$font-size: (
+$font-sizes: (
   xxs: 8px,
   xs: 10px,
   s: 12px,
@@ -6,9 +6,10 @@ $font-size: (
   l: 24px,
 );
 
-$font-weight: (
-  light: 100,
+$font-weights: (
+  light: 200,
   normal: 300,
+  heavy: 400,
   bold: 700,
   thicc: 900,
 )

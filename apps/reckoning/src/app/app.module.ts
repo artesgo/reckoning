@@ -9,15 +9,17 @@ import { Route, RouterModule } from '@angular/router';
 import { KarlaComponent } from './pages/karla/karla.component';
 import { HomeComponent } from './pages/home/home.component';
 import { I404Component } from './pages/i404/i404.component';
+import { ListComponent } from './pages/list/list.component';
 
 const ROUTES: Route[] = [
   { path: '', component: HomeComponent },
+  { path: 'list', component: ListComponent },
   { path: 'karla', component: KarlaComponent },
   { path: '**', component: I404Component },
 ]
 
 @NgModule({
-  declarations: [AppComponent, KarlaComponent, HomeComponent, I404Component],
+  declarations: [AppComponent, KarlaComponent, HomeComponent, I404Component, ListComponent],
   imports: [
     BrowserModule,
     ComponentsModule,

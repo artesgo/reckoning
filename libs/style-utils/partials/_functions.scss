@@ -1,0 +1,14 @@
+@use "./tokens" as tokens;
+@use './font-tokens' as fonts;
+
+@function font-size($size) {
+    @return map-get(fonts.$font-sizes, $size);
+}
+
+@function font-weight($weight) {
+    @return map-get(fonts.$font-weights, $weight);
+}
+
+@function spacing($token) {
+    @return map-get(tokens.$spacing, $token);
+}

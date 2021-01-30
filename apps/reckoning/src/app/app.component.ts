@@ -10,11 +10,13 @@ export class AppComponent implements OnInit {
   title$ = new BehaviorSubject('Growcery');
   year;
   dark = false;
+  map = true;
 
   constructor(private renderer: Renderer2) { }
 
   ngOnInit() {
     this.year = new Date().getFullYear();
+    this.toggleDarkMode();
   }
 
   toggleDarkMode() {
@@ -25,5 +27,9 @@ export class AppComponent implements OnInit {
       this.dark = true;
       this.renderer.addClass(document.body, 'dark-mode');
     }
+  }
+
+  toggleMap() {
+    this.map = !this.map;
   }
 }

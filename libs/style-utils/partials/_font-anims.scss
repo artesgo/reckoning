@@ -1,20 +1,20 @@
+@use './font-tokens';
+
 h1.breathe {
-  font-weight: 200;
-  font-size: map-get($font-size, l);
-  font-variation-settings: 'wght' 300, 'wdth' 85;
+  font-weight: font-weight(normal);
+  font-size: font-size(l);
+  font-variation-settings: 'wght' font-weight(normal), 'wdth' 85;
   animation: breathe 4000ms infinite both;
-  margin: 0 auto;
 }
 
 @keyframes breathe {
   0% {
-    font-variation-settings: 'wght' 300, 'wdth' 85;
+    font-variation-settings: 'wght' font-weight(normal), 'wdth' 85;
   }
   60% {
-    font-variation-settings: 'wght' 400, 'wdth' 200;
+    font-variation-settings: 'wght' font-weight(heavy), 'wdth' 200;
   }
-
   100% {
-    font-variation-settings: 'wght' 300, 'wdth' 85;
+    font-variation-settings: 'wght' font-weight(normal), 'wdth' 85;
   }
 }
