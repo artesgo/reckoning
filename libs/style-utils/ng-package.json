@@ -5,7 +5,7 @@
     "entryFile": "src/index.ts"
   },
   "assets": [
-    "./*.scss",
+    "./[^o]*.scss",
     "./partials/*"
   ]
 }

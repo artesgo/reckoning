@@ -27,3 +27,9 @@ the first entry allows you to import styles from anywhere in your app using just
 the second entry `node_modules` allows you to import styles from node_modules using the package namespace, in our case we're importing:
 
 `@import ~artesgo/style-utils/index;`
+
+## ng-package.json
+
+utilize the regex to exclude any debug files
+
+`[^o]*.scss` excludes files that start with `o`
