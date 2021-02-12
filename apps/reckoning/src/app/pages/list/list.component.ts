@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GroceryService } from '@artesgo/grocery';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'artesgo-list',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-
-  constructor() { }
+  item$: Observable<any[]>;
+  constructor(private gs: GroceryService) { }
 
   ngOnInit(): void {
+    this.item$ = this.gs.getGroceryList();
   }
 
 }

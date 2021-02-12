@@ -20,9 +20,14 @@
               "apps/reckoning/src/favicon.ico",
               "apps/reckoning/src/assets"
             ],
-            "styles": ["apps/reckoning/src/styles.scss"],
+            "styles": [
+              "apps/reckoning/src/styles.scss"
+            ],
             "stylePreprocessorOptions": {
-              "includePaths": ["apps/reckoning/src/styles", "node_modules"]
+              "includePaths": [
+                "apps/reckoning/src/styles",
+                "node_modules"
+              ]
             },
             "scripts": []
           },
@@ -84,11 +89,17 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/reckoning"],
+          "outputs": [
+            "coverage/apps/reckoning"
+          ],
           "options": {
             "jestConfig": "apps/reckoning/jest.config.js",
             "passWithNoTests": true
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     },
@@ -113,7 +124,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/reckoning-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/reckoning-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
@@ -147,7 +160,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/state-machine"],
+          "outputs": [
+            "coverage/libs/state-machine"
+          ],
           "options": {
             "jestConfig": "libs/state-machine/jest.config.js",
             "passWithNoTests": true
@@ -184,7 +199,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/components"],
+          "outputs": [
+            "coverage/libs/components"
+          ],
           "options": {
             "jestConfig": "libs/components/jest.config.js",
             "passWithNoTests": true
@@ -221,7 +238,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/layouts"],
+          "outputs": [
+            "coverage/libs/layouts"
+          ],
           "options": {
             "jestConfig": "libs/layouts/jest.config.js",
             "passWithNoTests": true
@@ -278,7 +297,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/grocery"],
+          "outputs": [
+            "coverage/libs/grocery"
+          ],
           "options": {
             "jestConfig": "libs/grocery/jest.config.js",
             "passWithNoTests": true
@@ -315,7 +336,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/auth"],
+          "outputs": [
+            "coverage/libs/auth"
+          ],
           "options": {
             "jestConfig": "libs/auth/jest.config.js",
             "passWithNoTests": true
@@ -325,7 +348,8 @@
     }
   },
   "cli": {
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@nrwl/angular",
+    "analytics": false
   },
   "schematics": {
     "@nrwl/angular": {

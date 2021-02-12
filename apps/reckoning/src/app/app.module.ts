@@ -1,5 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../environments/environment';
+
 import { ComponentsModule } from '@artesgo/components';
 import { LayoutsModule } from '@artesgo/layouts';
 import { StateMachineModule } from '@artesgo/state-machine';
@@ -27,6 +31,9 @@ const ROUTES: Route[] = [
     GroceryModule,
     RouterModule.forRoot(ROUTES),
     StateMachineModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
+    GroceryModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

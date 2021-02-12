@@ -1,18 +1,25 @@
 @use '~@artesgo/style-utils' as utils;
 
 :host {
-  display: block;
-  font-family: sans-serif;
+  display: grid;
+  grid-template-rows: utils.spacing(xl) 1fr utils.spacing(xl);
 }
 
 main {
-  min-height: 600px;
-  max-width: 1200px;
+  max-width: utils.spacing(xxxxl) * 10;
   margin: 0 auto;
-  padding: 16px 20px;
+  padding: 0 utils.spacing(m);
+  $spacing: utils.spacing(xl) * 2;
+  min-height: calc(100vh - #{$spacing});
 }
 
+// icon imgs
 img {
-  width: 24px;
-  height: 24px;
+  width: utils.spacing(m);
+  height: utils.spacing(m);
+}
+
+reck-footer {
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
