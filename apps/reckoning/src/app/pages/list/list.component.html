@@ -1,3 +1,35 @@
-<ul>
-    {{ item$ | async | json }}
-</ul>
+<table cdk-table [dataSource]="datasource$ | async">
+    <ng-container cdkColumnDef="name">
+        <th class="wide" cdk-header-cell *cdkHeaderCellDef>Name</th>
+        <td class="wide" cdk-cell *cdkCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+    <ng-container cdkColumnDef="price">
+        <th cdk-header-cell *cdkHeaderCellDef>Price</th>
+        <td cdk-cell *cdkCellDef="let element"> {{element.price}} </td>
+    </ng-container>
+    <ng-container cdkColumnDef="sale">
+        <th cdk-header-cell *cdkHeaderCellDef>Sale</th>
+        <td cdk-cell *cdkCellDef="let element"> {{element.sale}} </td>
+    </ng-container>
+    <ng-container cdkColumnDef="unit">
+        <th cdk-header-cell *cdkHeaderCellDef>Unit</th>
+        <td cdk-cell *cdkCellDef="let element"> {{element.unit}} </td>
+    </ng-container>
+    <ng-container cdkColumnDef="aisle">
+        <th cdk-header-cell *cdkHeaderCellDef>Aisle</th>
+        <td cdk-cell *cdkCellDef="let element"> {{element.aisle}} </td>
+    </ng-container>
+    <ng-container cdkColumnDef="shelf">
+        <th cdk-header-cell *cdkHeaderCellDef>Shelf</th>
+        <td cdk-cell *cdkCellDef="let element"> {{element.shelf}} </td>
+    </ng-container>
+    <ng-container cdkColumnDef="actions">
+        <th cdk-header-cell *cdkHeaderCellDef>Actions</th>
+        <td cdk-cell *cdkCellDef="let element" >
+            <button cdk-button (click)="edit(element)">Edit</button>
+        </td>
+    </ng-container>
+
+    <tr cdk-header-row *cdkHeaderRowDef="displayedColumns"></tr>
+    <tr cdk-row *cdkRowDef="let row; columns: displayedColumns;"></tr>
+</table>

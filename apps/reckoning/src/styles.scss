@@ -11,3 +11,13 @@ html, body {
 body {
   min-height: 100vh;
 }
+
+
+.dark-mode {
+  a:visited {
+    color: white;
+  }
+}
+a:visited {
+  color: darkblue;
+}

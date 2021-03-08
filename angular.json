@@ -345,6 +345,46 @@
           }
         }
       }
+    },
+    "firestore": {
+      "projectType": "library",
+      "root": "libs/firestore",
+      "sourceRoot": "libs/firestore/src",
+      "prefix": "artesgo",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "libs/firestore/tsconfig.lib.json",
+            "project": "libs/firestore/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/firestore/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/firestore/src/test.ts",
+            "tsConfig": "libs/firestore/tsconfig.spec.json",
+            "karmaConfig": "libs/firestore/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/firestore/tsconfig.lib.json",
+              "libs/firestore/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {

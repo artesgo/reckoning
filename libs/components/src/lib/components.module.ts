@@ -8,6 +8,7 @@ import { ReckRadioComponent } from './reck-radio/reck-radio.component';
 import { ReckModalComponent } from './reck-modal/reck-modal.component';
 import { ReckPopoverComponent } from './reck-popover/reck-popover.component';
 import { ReckSlidesComponent } from './reck-slides/reck-slides.component';
+import { Overlay } from '@angular/cdk/overlay';
 
 const EXPORTS = [
   ReckButtonComponent,
@@ -22,6 +23,7 @@ const EXPORTS = [
 @NgModule({
   imports: [CommonModule],
   declarations: [...EXPORTS],
-  exports: [...EXPORTS]
+  exports: [...EXPORTS],
+  providers: [Overlay]
 })
 export class ComponentsModule {}

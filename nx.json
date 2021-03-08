@@ -28,6 +28,7 @@
     "layouts": { "tags": [] },
     "style-utils": { "tags": [] },
     "grocery": { "tags": [] },
-    "auth": { "tags": [] }
+    "auth": { "tags": [] },
+    "firestore": { "tags": [] }
   }
 }

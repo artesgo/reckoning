@@ -1,0 +1,6 @@
+@use '~@artesgo/style-utils' as utils;
+
+label {
+    width: 100%;
+    margin-right: utils.spacing(xs);
+}

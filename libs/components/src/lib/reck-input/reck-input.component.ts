@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'reck-input',
@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./reck-input.component.scss']
 })
 export class ReckInputComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  @Input() label: string;
+  @Input() id: string;
+  static _id = 0;
+  constructor() {
   }
 
+  ngOnInit(): void {
+    if (!this.id) {
+      this.id = `reck-input-${ReckInputComponent._id++}`;
+    }
+  }
 }

@@ -2,6 +2,7 @@
   <a routerLink="list" logo *ngIf="map else list" (click)="toggleMap()">
     <img src="./assets/svg/to-do-list.svg" alt="show map" />
   </a>
+
   <ng-template #list>
     <a routerLink="" logo (click)="toggleMap()">
       <img src="./assets/svg/map.svg" alt="show list" />
@@ -9,6 +10,7 @@
   </ng-template>
 
   <span title>{{ title$ | async }}</span>
+
   <button login (click)="toggleDarkMode()">
     <img src="./assets/svg/sun.svg" alt="show grocery list" *ngIf="dark else light"/>
       
@@ -23,6 +25,9 @@
 </main>
 
 <reck-footer>
+  <ng-container controls>
+    <button (click)="open()">+</button>
+  </ng-container>
   <ng-container copy>artesgo &copy; {{ year }}</ng-container>
   <ng-container heck>
     <a routerLink="karla">Credits</a>

@@ -7,7 +7,6 @@
 
 main {
   max-width: utils.spacing(xxxxl) * 10;
-  margin: 0 auto;
   padding: 0 utils.spacing(m);
   $spacing: utils.spacing(xl) * 2;
   min-height: calc(100vh - #{$spacing});

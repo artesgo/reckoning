@@ -2,9 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { CdkTableModule } from '@angular/cdk/table';
+
 import { environment } from '../environments/environment';
 
-import { ComponentsModule } from '@artesgo/components';
+import { ComponentsModule, ReckOverlayService } from '@artesgo/components';
 import { LayoutsModule } from '@artesgo/layouts';
 import { StateMachineModule } from '@artesgo/state-machine';
 import { GroceryModule } from '@artesgo/grocery';
@@ -14,6 +16,7 @@ import { KarlaComponent } from './pages/karla/karla.component';
 import { HomeComponent } from './pages/home/home.component';
 import { I404Component } from './pages/i404/i404.component';
 import { ListComponent } from './pages/list/list.component';
+import { AddComponent } from './components/add/add.component';
 
 const ROUTES: Route[] = [
   { path: '', component: HomeComponent },
@@ -23,7 +26,14 @@ const ROUTES: Route[] = [
 ]
 
 @NgModule({
-  declarations: [AppComponent, KarlaComponent, HomeComponent, I404Component, ListComponent],
+  declarations: [
+    AppComponent,
+    KarlaComponent,
+    HomeComponent,
+    I404Component,
+    ListComponent,
+    AddComponent
+  ],
   imports: [
     BrowserModule,
     ComponentsModule,
@@ -34,8 +44,11 @@ const ROUTES: Route[] = [
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     GroceryModule,
+    CdkTableModule
   ],
-  providers: [],
+  providers: [
+    ReckOverlayService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

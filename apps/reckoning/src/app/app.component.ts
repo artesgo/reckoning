@@ -1,5 +1,10 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { RECK_MODAL_CONFIG } from 'libs/components/src/lib/reck-modal/reck-modal.component';
+import { ReckOverlayRef } from 'libs/components/src/lib/services/overlay-ref';
+import { ReckOverlayService } from 'libs/components/src/lib/services/overlay.service';
 import { BehaviorSubject } from 'rxjs';
+import { take } from 'rxjs/operators';
+import { AddComponent } from './components/add/add.component';
 
 @Component({
   selector: 'artesgo-root',
@@ -12,7 +17,10 @@ export class AppComponent implements OnInit {
   dark = false;
   map = true;
 
-  constructor(private renderer: Renderer2) { }
+  constructor(
+    private renderer: Renderer2,
+    private overlayService: ReckOverlayService,
+    ) { }
 
   ngOnInit() {
     this.year = new Date().getFullYear();
@@ -31,5 +39,17 @@ export class AppComponent implements OnInit {
 
   toggleMap() {
     this.map = !this.map;
+  }
+
+  overlayRef: ReckOverlayRef
+  open() {
+    if (!this.overlayRef || this.overlayRef.closed) {
+      let config = RECK_MODAL_CONFIG;
+      this.overlayRef = this.overlayService.open(AddComponent, config);
+      this.overlayRef
+          .afterClosed()
+          .pipe(take(1))
+          .subscribe(() => console.log(`log after close`));
+    }
   }
 }
